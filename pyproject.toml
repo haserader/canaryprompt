@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "haserader-canaryprompt"
+version = "0.1.0"
+description = "按结构键把条目聚类，标出提示词的灰度发布上的同组项与各组的代表样本"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "haserader" }]
+keywords = ["analysis", "observability", "evaluation", "rag"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://haserader.github.io"
+Repository = "https://github.com/haserader/canaryprompt"
+Issues = "https://github.com/haserader/canaryprompt/issues"
+
+[project.scripts]
+canaryprompt = "canaryprompt:main"
+
+[tool.setuptools]
+py-modules = ["canaryprompt"]
